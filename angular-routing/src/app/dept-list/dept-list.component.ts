@@ -19,11 +19,8 @@ export class DeptListComponent  {
   constructor(private router: Router) {}
 
   public departments = [
-    {id: '1', name: 'Angular'},
-    {id: '2', name: 'Node'},
-    {id: '3', name: 'MongoDB'},
-    {id: '4', name: 'Ruby'},
-    {id: '5', name: 'Bootstrap'},
+    {id: '1', name: 'Angular'}, {id: '2', name: 'Node'}, {id: '3', name: 'MongoDB'},
+    {id: '4', name: 'Ruby'}, {id: '5', name: 'Bootstrap'},
   ];
 
   onSelect(department) {
