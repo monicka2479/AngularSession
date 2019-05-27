@@ -1,0 +1,14 @@
+form{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input, select, radio, label, button {
+  height:25px;
+  margin: 10px;
+  line-height: 1em;
+  vertical-align: middle;
+  font-family: inherit;
+}
+.d-none {
+  display:none;
+}
+
