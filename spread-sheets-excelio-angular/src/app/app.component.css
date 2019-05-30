@@ -1,0 +1,15 @@
+.loadExcelInput{
+    border:1px solid darkgray;
+    width:95vw;
+    margin-top:5px;
+    padding:2px 0px 2px 0px;
+}
+.exportExcel{
+    border:1px solid darkgray;
+    width:95vw;
+    margin-top:5px;
+    padding:2px 0px 2px 0px;
+}
+p{
+    font-weight: bold
+}

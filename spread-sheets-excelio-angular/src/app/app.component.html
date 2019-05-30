@@ -1,0 +1,12 @@
+<div class='maincontainer'>
+<gc-spread-sheets [hostStyle]="hostStyle" (workbookInitialized)="workbookInit($event)">
+</gc-spread-sheets>
+<div class='loadExcelInput'>
+    <p>Open Excel File</p>
+  <input type="file" name="files[]" multiple id="jsonFile" accept=".xlsx" (change)="onFileChange($event)" />
+</div>
+<div class='exportExcel'>
+    <p>Save Excel File</p>
+    <button (click)="onClickMe($event)">Save Excel!</button>
+</div>
+</div>

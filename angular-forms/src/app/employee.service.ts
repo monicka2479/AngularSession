@@ -7,7 +7,7 @@ import { User } from './user';
 })
 export class EmployeeService {
 
-   url = "http://localhost:3000/enroll";
+  url = "enroll";
   constructor(private http: HttpClient) { }
   enroll(user: User) {
     return this.http.post<any>(this.url, user);

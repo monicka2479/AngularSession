@@ -1,0 +1,26 @@
+<h1>Batch insert</h1>
+<form #userForm='ngForm' (ngSubmit)='onSubmit()'>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Username</th>
+    <th scope="col">email</th>
+    <th scope="col">phone</th>
+    <th scope="col">topic</th>
+    <th scope="col">timePreference</th>
+    <th scope="col">promo</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let user of users" scope="row">
+      <td><input type='text' #userName='ngModel' name='userName' [(ngModel)] = user.userName /></td>
+      <td><input type='text' #email='ngModel' name='email' [(ngModel)] = user.email /></td>
+      <td><input type='text' #phone='ngModel' name='phone' [(ngModel)] = user.phone /></td>
+      <td><input type='text' #topic='ngModel' name='topic' [(ngModel)] = user.topic /></td>
+      <td><input type='text' #timePreference='ngModel' name='timePreference' [(ngModel)] = user.timePreference /></td>
+      <td><input type='text' #promo='ngModel' name='promo' [(ngModel)] = user.promo /></td>
+  </tr>
+</tbody>
+<button class="btn btn-primary" type='submit'>Submit Form</button>
+</table>
+</form>
