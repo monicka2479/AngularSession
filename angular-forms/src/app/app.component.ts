@@ -10,8 +10,7 @@ import { EmployeeService } from './employee.service';
 })
 export class AppComponent {
   topics = ['Angular', 'React', 'Viu'];
-  userModel = new User('Monicka', 'monicka@test.com',
-  '23434234324', '', 'morning', true);
+
   constructor(private employeeService: EmployeeService){}
 
   userList = User[8];

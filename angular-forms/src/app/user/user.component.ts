@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { User } from '../user';
+import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from './user.service';
-
+import { User } from '../user';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -10,29 +9,37 @@ import { UserService } from './user.service';
 export class UserComponent implements OnInit {
 
   constructor(private userService: UserService) { }
-
+  name: string;
+  date: string;
   users:User[] = [];
-  list = [1, 2, 3, 4, 5, 6];
+  list = [1, 2, 3, 4, 5, 6,7,8,9,10];
+
 
   ngOnInit() {
-
     for (let i of this.list) {
-      this.users.push(new User('Monicka', 'monicka@test.com',
-      '23434234324', '', 'morning', true));
+      let user1 = new User('','','08.00 AM','09.00 AM','Task 1', 'true1')
+      this.users.push(user1);
     }
-
   }
 
-      onSubmit() {
-        console.log(this.users);
-        for (let user of this.users) {
-                  console.log("Email: "+ user.email); // 1, "string", false
+  onSubmit(name, date) {
+          console.log("Before: "+ JSON.stringify(this.users));
+          console.log("name: "+name +"date: "+date);
+
+
+            // for (let user1 of this.users) {
+            //         //  console.log("plannedTask: "+ user.plannedTask); // 1, "string", false
+
+            //         user1.userName=this.name;
+            //           user1.taskDate=this.date;
+            //       }
+
+            //       console.log("After: "+ this.users);
+            // this.userService.enroll(this.users)
+            //     .subscribe(
+            //       data => console.log('success', data),
+            //         error => console.error('success', error)
+            //       )
               }
-        this.userService.enroll(this.users)
-            .subscribe(
-              data => console.log('success', data),
-                error => console.error('success', error)
-              )
-          }
 
 }
